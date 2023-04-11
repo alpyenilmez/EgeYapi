@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CrmService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CrmService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Opp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aciklama" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="adset" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="altibir" type="xs:boolean" />
+      <xs:element minOccurs="0" name="anketaile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="anketbutce" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="anketevcilhayvan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="anketgayrimenkultip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="anketkita" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="anketortam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aramaizin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="besbir" type="xs:boolean" />
+      <xs:element minOccurs="0" name="birbir" type="xs:boolean" />
+      <xs:element minOccurs="0" name="browserlang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ceretap" type="xs:int" />
+      <xs:element minOccurs="0" name="cihazturu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dortbir" type="xs:boolean" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailizin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="form" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="formlink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="formtipi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gayrimenkultipi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gdprapproval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="gdprurl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="googleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ikibir" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ilgilendigiproje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kayittarihi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="kurumsalsatiskampanya" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="milliyet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="otp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="projectname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="referrer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="smsizin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ucbir" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ulke" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="utmcampaign" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="utmcontent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="utmmedium" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="utmsource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="utmterm" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Opp" nillable="true" type="tns:Opp" />
+</xs:schema>

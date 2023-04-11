@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DAL.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DAL.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://212.156.40.34:8082/CrmService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Login" nillable="true" type="tns:Login" />
+  <xs:complexType name="Incident">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivitiesComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ActualServiceUnits" type="xs:int" />
+      <xs:element minOccurs="0" name="BilledServiceUnits" type="xs:int" />
+      <xs:element minOccurs="0" name="BlockedProfile" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CaseOriginCode" type="xs:int" />
+      <xs:element minOccurs="0" name="CaseTypeCode" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckEmail" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ContractDetailId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContractId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContractServiceLevelCode" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedOnBehalfBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="CustomerContacted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CustomerId" type="ser:guid" />
+      <xs:element minOccurs="0" name="CustomerIdName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerIdType" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerIdYomiName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerSatisfactionCode" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntitlementId" type="ser:guid" />
+      <xs:element minOccurs="0" name="EntityImageId" type="ser:guid" />
+      <xs:element minOccurs="0" name="EscalatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ExistingCase" type="ser:guid" />
+      <xs:element minOccurs="0" name="FirstResponseByKPIId" type="ser:guid" />
+      <xs:element minOccurs="0" name="FirstResponseSLAStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstResponseSent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FollowUpTaskCreated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FollowupBy" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ImportSequenceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="IncidentId" type="ser:guid" />
+      <xs:element minOccurs="0" name="IncidentStageCode" type="xs:int" />
+      <xs:element minOccurs="0" name="InfluenceScore" type="xs:float" />
+      <xs:element minOccurs="0" name="IsEscalated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KbArticleId" type="ser:guid" />
+      <xs:element minOccurs="0" name="LastOnHoldTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MasterId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Merged" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MessageTypeCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ModifiedBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="ModifiedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedOnBehalfBy" type="ser:guid" />
+      <xs:element minOccurs="0" name="OnHoldTime" type="xs:int" />
+      <xs:element minOccurs="0" name="OverriddenCreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OwnerId" type="ser:guid" />
+      <xs:element minOccurs="0" name="OwnerIdType" type="xs:int" />
+      <xs:element minOccurs="0" name="OwningBusinessUnit" type="ser:guid" />
+      <xs:element minOccurs="0" name="ParentCaseId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PrimaryContactId" type="ser:guid" />
+      <xs:element minOccurs="0" name="PriorityCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductSerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ResolveBy" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ResolveByKPIId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ResolveBySLAStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseBy" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ResponsibleContactId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RouteCase" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SLAInvokedId" type="ser:guid" />
+      <xs:element minOccurs="0" name="SentimentValue" type="xs:float" />
+      <xs:element minOccurs="0" name="ServiceStage" type="xs:int" />
+      <xs:element minOccurs="0" name="SeverityCode" type="xs:int" />
+      <xs:element minOccurs="0" name="SocialProfileId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StageId" type="ser:guid" />
+      <xs:element minOccurs="0" name="StateCode" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusCode" type="xs:int" />
+      <xs:element minOccurs="0" name="SubjectId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TicketNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeZoneRuleVersionNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionCurrencyId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TraversedPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UTCConversionTimeZoneCode" type="xs:int" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="projectName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="utmSource" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Incident" nillable="true" type="tns:Incident" />
+</xs:schema>

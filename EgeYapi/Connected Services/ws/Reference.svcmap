@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="efb4c42a-8dbc-4618-b881-9dfe7b15171c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://212.156.40.34:8082/CrmService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CrmService.xsd" MetadataType="Schema" ID="46488a97-571f-4dae-858a-676db6b44b83" SourceId="1" SourceUrl="http://212.156.40.34:8082/CrmService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CrmService1.xsd" MetadataType="Schema" ID="45b1a1c4-2190-4545-9536-9ba10661fc32" SourceId="1" SourceUrl="http://212.156.40.34:8082/CrmService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CrmService.wsdl" MetadataType="Wsdl" ID="64cfd802-cd13-4b7c-812a-12c0813ebfa2" SourceId="1" SourceUrl="http://212.156.40.34:8082/CrmService.svc?wsdl" />
+    <MetadataFile FileName="CrmService2.xsd" MetadataType="Schema" ID="21012c0e-0b59-4a69-84c7-b9d0cbd793de" SourceId="1" SourceUrl="http://212.156.40.34:8082/CrmService.svc?xsd=xsd4" />
+    <MetadataFile FileName="CrmService.disco" MetadataType="Disco" ID="8c88215b-2c38-4ba8-af6d-5f2c7f7139f4" SourceId="1" SourceUrl="http://212.156.40.34:8082/CrmService.svc?disco" />
+    <MetadataFile FileName="CrmService3.xsd" MetadataType="Schema" ID="4d83ffbf-a57a-4a69-afd5-f0d3d314d49a" SourceId="1" SourceUrl="http://212.156.40.34:8082/CrmService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CrmService4.xsd" MetadataType="Schema" ID="9c443c3d-6cb7-4eef-8c5e-ef0ddd15790c" SourceId="1" SourceUrl="http://212.156.40.34:8082/CrmService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

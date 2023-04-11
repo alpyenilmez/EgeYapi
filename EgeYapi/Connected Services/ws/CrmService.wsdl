@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CrmService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://212.156.40.34:8082/CrmService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://212.156.40.34:8082/CrmService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://212.156.40.34:8082/CrmService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CrmService" />
+      <xsd:import schemaLocation="http://212.156.40.34:8082/CrmService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DAL.Entities" />
+      <xsd:import schemaLocation="http://212.156.40.34:8082/CrmService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DAL" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICrmService_malsahibisilme_InputMessage">
+    <wsdl:part name="parameters" element="tns:malsahibisilme" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_malsahibisilme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:malsahibisilmeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_VIPOnayMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:VIPOnayMail" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_VIPOnayMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VIPOnayMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GecikmeMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GecikmeMail" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GecikmeMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GecikmeMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_ImportContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportContact" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_ImportContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_DogumGunuMailleri_InputMessage">
+    <wsdl:part name="parameters" element="tns:DogumGunuMailleri" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_DogumGunuMailleri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DogumGunuMailleriResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_TelefonKapat_InputMessage">
+    <wsdl:part name="parameters" element="tns:TelefonKapat" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_TelefonKapat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TelefonKapatResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GeriAranacakTelefonGorusmeleriOlustur_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeriAranacakTelefonGorusmeleriOlustur" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GeriAranacakTelefonGorusmeleriOlustur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeriAranacakTelefonGorusmeleriOlusturResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GeriAramaSaatAralikli9_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeriAramaSaatAralikli9" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GeriAramaSaatAralikli9_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeriAramaSaatAralikli9Response" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GeriAramaSaatAralikli12_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeriAramaSaatAralikli12" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GeriAramaSaatAralikli12_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeriAramaSaatAralikli12Response" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GeriAramaSaatAralikli15_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeriAramaSaatAralikli15" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_GeriAramaSaatAralikli15_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeriAramaSaatAralikli15Response" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_Tekillestir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tekillestir" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_Tekillestir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TekillestirResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_SMSRandevuBilgilendirme_InputMessage">
+    <wsdl:part name="parameters" element="tns:SMSRandevuBilgilendirme" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_SMSRandevuBilgilendirme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SMSRandevuBilgilendirmeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_Import_Tel_InputMessage">
+    <wsdl:part name="parameters" element="tns:Import_Tel" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_Import_Tel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Import_TelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_NetworkMailBilgilendirme_InputMessage">
+    <wsdl:part name="parameters" element="tns:NetworkMailBilgilendirme" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_NetworkMailBilgilendirme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NetworkMailBilgilendirmeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_WebFormMailHatirlatma_InputMessage">
+    <wsdl:part name="parameters" element="tns:WebFormMailHatirlatma" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_WebFormMailHatirlatma_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WebFormMailHatirlatmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_Import_albaraka_InputMessage">
+    <wsdl:part name="parameters" element="tns:Import_albaraka" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_Import_albaraka_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Import_albarakaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_NetworkSozlesmeHatirlatma_InputMessage">
+    <wsdl:part name="parameters" element="tns:NetworkSozlesmeHatirlatma" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_NetworkSozlesmeHatirlatma_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NetworkSozlesmeHatirlatmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_FirsatHatirlatma_InputMessage">
+    <wsdl:part name="parameters" element="tns:FirsatHatirlatma" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_FirsatHatirlatma_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FirsatHatirlatmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_NetworkHesaplama_InputMessage">
+    <wsdl:part name="parameters" element="tns:NetworkHesaplama" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_NetworkHesaplama_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NetworkHesaplamaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_OtoSenet_InputMessage">
+    <wsdl:part name="parameters" element="tns:OtoSenet" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_OtoSenet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OtoSenetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_OtoOdeme_InputMessage">
+    <wsdl:part name="parameters" element="tns:OtoOdeme" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_OtoOdeme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OtoOdemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_UpdateOrtaklar_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrtaklar" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_UpdateOrtaklar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrtaklarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateOpportunity2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOpportunity2" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateOpportunity2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOpportunity2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateReservation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReservation" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateReservation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReservationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateOpportunityZingat_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOpportunityZingat" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateOpportunityZingat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOpportunityZingatResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateOpportunity_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOpportunity" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateOpportunity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOpportunityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateContactProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContactProject" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateContactProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContactProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_UpdateSenet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSenet" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_UpdateSenet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSenetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_SatisNumaralandirma_InputMessage">
+    <wsdl:part name="parameters" element="tns:SatisNumaralandirma" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_SatisNumaralandirma_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SatisNumaralandirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateIncident_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIncident" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateIncident_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIncidentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateCustomerNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerNote" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateCustomerNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateIYS_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIYS" />
+  </wsdl:message>
+  <wsdl:message name="ICrmService_CreateIYS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIYSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICrmService">
+    <wsdl:operation name="malsahibisilme">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/malsahibisilme" message="tns:ICrmService_malsahibisilme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/malsahibisilmeResponse" message="tns:ICrmService_malsahibisilme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VIPOnayMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/VIPOnayMail" message="tns:ICrmService_VIPOnayMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/VIPOnayMailResponse" message="tns:ICrmService_VIPOnayMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GecikmeMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/GecikmeMail" message="tns:ICrmService_GecikmeMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/GecikmeMailResponse" message="tns:ICrmService_GecikmeMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/ImportContact" message="tns:ICrmService_ImportContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/ImportContactResponse" message="tns:ICrmService_ImportContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DogumGunuMailleri">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/DogumGunuMailleri" message="tns:ICrmService_DogumGunuMailleri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/DogumGunuMailleriResponse" message="tns:ICrmService_DogumGunuMailleri_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TelefonKapat">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/TelefonKapat" message="tns:ICrmService_TelefonKapat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/TelefonKapatResponse" message="tns:ICrmService_TelefonKapat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeriAranacakTelefonGorusmeleriOlustur">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/GeriAranacakTelefonGorusmeleriOlustur" message="tns:ICrmService_GeriAranacakTelefonGorusmeleriOlustur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/GeriAranacakTelefonGorusmeleriOlusturResponse" message="tns:ICrmService_GeriAranacakTelefonGorusmeleriOlustur_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeriAramaSaatAralikli9">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/GeriAramaSaatAralikli9" message="tns:ICrmService_GeriAramaSaatAralikli9_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/GeriAramaSaatAralikli9Response" message="tns:ICrmService_GeriAramaSaatAralikli9_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeriAramaSaatAralikli12">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/GeriAramaSaatAralikli12" message="tns:ICrmService_GeriAramaSaatAralikli12_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/GeriAramaSaatAralikli12Response" message="tns:ICrmService_GeriAramaSaatAralikli12_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeriAramaSaatAralikli15">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/GeriAramaSaatAralikli15" message="tns:ICrmService_GeriAramaSaatAralikli15_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/GeriAramaSaatAralikli15Response" message="tns:ICrmService_GeriAramaSaatAralikli15_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tekillestir">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/Tekillestir" message="tns:ICrmService_Tekillestir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/TekillestirResponse" message="tns:ICrmService_Tekillestir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SMSRandevuBilgilendirme">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/SMSRandevuBilgilendirme" message="tns:ICrmService_SMSRandevuBilgilendirme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/SMSRandevuBilgilendirmeResponse" message="tns:ICrmService_SMSRandevuBilgilendirme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Import_Tel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/Import_Tel" message="tns:ICrmService_Import_Tel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/Import_TelResponse" message="tns:ICrmService_Import_Tel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NetworkMailBilgilendirme">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/NetworkMailBilgilendirme" message="tns:ICrmService_NetworkMailBilgilendirme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/NetworkMailBilgilendirmeResponse" message="tns:ICrmService_NetworkMailBilgilendirme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WebFormMailHatirlatma">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/WebFormMailHatirlatma" message="tns:ICrmService_WebFormMailHatirlatma_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/WebFormMailHatirlatmaResponse" message="tns:ICrmService_WebFormMailHatirlatma_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Import_albaraka">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/Import_albaraka" message="tns:ICrmService_Import_albaraka_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/Import_albarakaResponse" message="tns:ICrmService_Import_albaraka_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NetworkSozlesmeHatirlatma">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/NetworkSozlesmeHatirlatma" message="tns:ICrmService_NetworkSozlesmeHatirlatma_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/NetworkSozlesmeHatirlatmaResponse" message="tns:ICrmService_NetworkSozlesmeHatirlatma_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FirsatHatirlatma">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/FirsatHatirlatma" message="tns:ICrmService_FirsatHatirlatma_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/FirsatHatirlatmaResponse" message="tns:ICrmService_FirsatHatirlatma_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NetworkHesaplama">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/NetworkHesaplama" message="tns:ICrmService_NetworkHesaplama_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/NetworkHesaplamaResponse" message="tns:ICrmService_NetworkHesaplama_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OtoSenet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/OtoSenet" message="tns:ICrmService_OtoSenet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/OtoSenetResponse" message="tns:ICrmService_OtoSenet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OtoOdeme">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/OtoOdeme" message="tns:ICrmService_OtoOdeme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/OtoOdemeResponse" message="tns:ICrmService_OtoOdeme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrtaklar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/UpdateOrtaklar" message="tns:ICrmService_UpdateOrtaklar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/UpdateOrtaklarResponse" message="tns:ICrmService_UpdateOrtaklar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOpportunity2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/CreateOpportunity2" message="tns:ICrmService_CreateOpportunity2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/CreateOpportunity2Response" message="tns:ICrmService_CreateOpportunity2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReservation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/CreateReservation" message="tns:ICrmService_CreateReservation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/CreateReservationResponse" message="tns:ICrmService_CreateReservation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOpportunityZingat">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/CreateOpportunityZingat" message="tns:ICrmService_CreateOpportunityZingat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/CreateOpportunityZingatResponse" message="tns:ICrmService_CreateOpportunityZingat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOpportunity">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/CreateOpportunity" message="tns:ICrmService_CreateOpportunity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/CreateOpportunityResponse" message="tns:ICrmService_CreateOpportunity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateContactProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/CreateContactProject" message="tns:ICrmService_CreateContactProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/CreateContactProjectResponse" message="tns:ICrmService_CreateContactProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSenet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/UpdateSenet" message="tns:ICrmService_UpdateSenet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/UpdateSenetResponse" message="tns:ICrmService_UpdateSenet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SatisNumaralandirma">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/SatisNumaralandirma" message="tns:ICrmService_SatisNumaralandirma_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/SatisNumaralandirmaResponse" message="tns:ICrmService_SatisNumaralandirma_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/CreateCustomer" message="tns:ICrmService_CreateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/CreateCustomerResponse" message="tns:ICrmService_CreateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIncident">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/CreateIncident" message="tns:ICrmService_CreateIncident_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/CreateIncidentResponse" message="tns:ICrmService_CreateIncident_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/CreateCustomerNote" message="tns:ICrmService_CreateCustomerNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/CreateCustomerNoteResponse" message="tns:ICrmService_CreateCustomerNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIYS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICrmService/CreateIYS" message="tns:ICrmService_CreateIYS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICrmService/CreateIYSResponse" message="tns:ICrmService_CreateIYS_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICrmService" type="tns:ICrmService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="malsahibisilme">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/malsahibisilme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VIPOnayMail">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/VIPOnayMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GecikmeMail">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/GecikmeMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContact">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/ImportContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DogumGunuMailleri">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/DogumGunuMailleri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelefonKapat">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/TelefonKapat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeriAranacakTelefonGorusmeleriOlustur">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/GeriAranacakTelefonGorusmeleriOlustur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeriAramaSaatAralikli9">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/GeriAramaSaatAralikli9" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeriAramaSaatAralikli12">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/GeriAramaSaatAralikli12" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeriAramaSaatAralikli15">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/GeriAramaSaatAralikli15" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tekillestir">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/Tekillestir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMSRandevuBilgilendirme">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/SMSRandevuBilgilendirme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Import_Tel">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/Import_Tel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NetworkMailBilgilendirme">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/NetworkMailBilgilendirme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebFormMailHatirlatma">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/WebFormMailHatirlatma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Import_albaraka">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/Import_albaraka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NetworkSozlesmeHatirlatma">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/NetworkSozlesmeHatirlatma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirsatHatirlatma">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/FirsatHatirlatma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NetworkHesaplama">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/NetworkHesaplama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OtoSenet">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/OtoSenet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OtoOdeme">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/OtoOdeme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrtaklar">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/UpdateOrtaklar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOpportunity2">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/CreateOpportunity2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReservation">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/CreateReservation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOpportunityZingat">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/CreateOpportunityZingat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOpportunity">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/CreateOpportunity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateContactProject">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/CreateContactProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSenet">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/UpdateSenet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SatisNumaralandirma">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/SatisNumaralandirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/CreateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIncident">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/CreateIncident" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerNote">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/CreateCustomerNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateIYS">
+      <soap:operation soapAction="http://tempuri.org/ICrmService/CreateIYS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CrmService">
+    <wsdl:port name="BasicHttpBinding_ICrmService" binding="tns:BasicHttpBinding_ICrmService">
+      <soap:address location="http://212.156.40.34:8082/CrmService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
